@@ -1,15 +1,14 @@
-# Imports go at the top
 from microbit import *
 
 data = []
 
-# Writes data 144 times to the array called data
-while len(data) < 144:
+# Skrive data 12 ganger til en array som heter data
+while len(data) < 12:
     data.append(temperature())
-    # Sleeps in 5 minutes (in milliseconds)
-    sleep(300000) 
+    # Sove i 1 time
+    sleep(3600000) 
 
-# Write the 144 temperature readings in a temp.dat file
+# Skrive de 12 temperatur avlesningene i en temp.dat fil
 with open('temp.dat', 'w') as min_fil:
     for i in data:
         min_fil.write(str(i))
